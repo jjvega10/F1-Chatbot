@@ -1,0 +1,8 @@
+Who is leading the f1 drivers championship?
+Which driver has the largest share of his teams points?
+Which driver has the largest share of his teams points, where the combined team total is more than 50 points?
+Which driver who is NOT part of Mclaren, Redbull, Ferrari or Mercedes has the most points?
+Which team is in 3rd place in the championship?
+Which drivers are part of the team that is last in the standings?
+Which drivers have over 100 points in the standings?
+Who is the worst driver racing for Alpine?
