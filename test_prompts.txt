@@ -1,8 +1,9 @@
-Who is leading the f1 drivers championship?
-Which driver has the largest share of his teams points?
-Which driver has the largest share of his teams points, where the combined team total is more than 50 points?
-Which driver who is NOT part of Mclaren, Redbull, Ferrari or Mercedes has the most points?
-Which team is in 3rd place in the championship?
-Which drivers are part of the team that is last in the standings?
-Which drivers have over 100 points in the standings?
-Who is the worst driver racing for Alpine?
+Who is leading the f1 drivers championship?|Oscar Piastri
+Which driver has the largest share of his teams points?|Pierre Gasly
+Which driver has the largest share of his teams points, where the combined team total is more than 50 points?|Max Verstappen
+Which driver who is NOT part of Mclaren, Redbull, Ferrari or Mercedes has the most points?|Alexander Albon
+Which team is in 3rd place in the championship?|Mercedes
+Which drivers are part of the team that is last in the standings?|Pierre Gasly, Franco Colapinto and Jack Doohan
+Which drivers have over 100 points in the standings?|Oscar Piastri, Lando Norris, Max Verstappen, George Russell, Charles Leclerc and Lewis Hamilton
+Who is the worst driver racing for Alpine?|Franco Colapinto and Jack Doohan
+What is the points difference between 1st and 2nd place?|31 points
