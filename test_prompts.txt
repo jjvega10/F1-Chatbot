@@ -7,3 +7,4 @@ Which drivers are part of the team that is last in the standings?|Pierre Gasly, 
 Which drivers have over 100 points in the standings?|Oscar Piastri, Lando Norris, Max Verstappen, George Russell, Charles Leclerc and Lewis Hamilton
 Who is the worst driver racing for Alpine?|Franco Colapinto and Jack Doohan
 What is the points difference between 1st and 2nd place?|31 points
+Who are the closest rivals to both Ferrari drivers?|Russell, Verstappen and Albon

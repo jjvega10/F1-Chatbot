@@ -53,40 +53,12 @@ def extract_text_from_dynamic_site(url, wait_time=10):
 
 
 # Drivers
-url = f"https://www.formula1.com/en/results/2025/drivers"
-soup_og = extract_text_from_dynamic_site(url, wait_time=3)
-html_table = soup_og.find_all('table')[0]
-html_text = str(html_table.prettify())
-html_text = re.sub(" class=\"[^\"]*\"", "", html_text)
-html_text = re.sub("<img[^>]*>", "", html_text)
-html_text = re.sub("<a[^>]*>", "", html_text)
-html_text = re.sub("<span[^>]*>", "", html_text)
-html_text = re.sub("</span[^>]*>", "", html_text)
-html_text = re.sub("<br>", "", html_text)
-html_text = re.sub("<p>", "", html_text)
-html_text = re.sub("\\\n *", "", html_text)
-dr_raw_markdown_table = htmltabletomd.convert_table(html_text)
-drivers = pd.read_html(StringIO(html_text))[0]
-dr_html_table = drivers.set_index('POS.')[['DRIVER', 'TEAM', 'PTS.']].to_html(border='')
-dr_minified = htmlmin.minify(dr_html_table, remove_empty_space=True)
+with open("data-cache/drivers_standings.html", "r") as f:
+    dr_minified = f.read()
 
 # Teams
-url = f"https://www.formula1.com/en/results/2025/team"
-soup_og = extract_text_from_dynamic_site(url, wait_time=3)
-html_table = soup_og.find_all('table')[0]
-html_text = str(html_table.prettify())
-html_text = re.sub(" class=\"[^\"]*\"", "", html_text)
-html_text = re.sub("<img[^>]*>", "", html_text)
-html_text = re.sub("<a[^>]*>", "", html_text)
-html_text = re.sub("<span[^>]*>", "", html_text)
-html_text = re.sub("</span[^>]*>", "", html_text)
-html_text = re.sub("<br>", "", html_text)
-html_text = re.sub("<p>", "", html_text)
-html_text = re.sub("\\\n *", "", html_text)
-tm_raw_markdown_table = htmltabletomd.convert_table(html_text)
-teams = pd.read_html(StringIO(html_text))[0]
-tm_html_table = teams.set_index('POS.')[['TEAM', 'PTS.']].to_html(border='')
-tm_minified = htmlmin.minify(tm_html_table, remove_empty_space=True)
+with open("data-cache/team_standings.html", "r") as f:
+    tm_minified = f.read()
 
 # ------------------------------
 # Tool: Get F1 standings
