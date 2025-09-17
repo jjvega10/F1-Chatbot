@@ -60,6 +60,13 @@ with open("data-cache/drivers_standings.html", "r") as f:
 with open("data-cache/team_standings.html", "r") as f:
     tm_minified = f.read()
 
+# Schedule
+with open("data-cache/schedule_text.txt", "r") as f:
+    schedule_text = f.read()
+
+# Current date
+curr_date = pd.Timestamp.now().strftime('%b %d, %Y')
+
 # ------------------------------
 # Tool: Get F1 standings
 # ------------------------------
@@ -104,11 +111,14 @@ def get_response(user_query, chat_history):
 
     # Define prompt (must include input + agent_scratchpad)
     prompt = ChatPromptTemplate.from_template(
-        """You are an expert in Formula 1 that will assist the user with questions regarding the sport.
+        f"""You are an expert in Formula 1 that will assist the user with questions regarding the sport.
+The current date is {curr_date}.
+The schedule is as follows:
+{schedule_text}
 The current season is 2025, there have been a few changes in terms of driver line-ups.
 If you need to know which driver belongs to a certain team or which team a driver belongs to, use `get_f1_driver_standings`.
-Use `get_f1_driver_standings` and `get_f1_team_standings` to assist the user.
-        
+Use `get_f1_driver_standings` and `get_f1_team_standings` to assist the user."""+
+        """
 Conversation so far:
 {input}
 

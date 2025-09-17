@@ -1,0 +1,27 @@
+|          | Country        | Dates           |
+|:---------|:---------------|:----------------|
+| TESTING  | Sakhir         | 26 - 28 Feb     |
+| ROUND 1  | Australia      | 14 - 16 Mar     |
+| ROUND 2  | China          | 21 - 23 Mar     |
+| ROUND 3  | Japan          | 04 - 06 Apr     |
+| ROUND 4  | Bahrain        | 11 - 13 Apr     |
+| ROUND 5  | Saudi Arabia   | 18 - 20 Apr     |
+| ROUND 6  | Miami          | 02 - 04 May     |
+| ROUND 7  | Emilia-Romagna | 16 - 18 May     |
+| ROUND 8  | Monaco         | 23 - 25 May     |
+| ROUND 9  | Spain          | 30 May - 01 Jun |
+| ROUND 10 | Canada         | 13 - 15 Jun     |
+| ROUND 11 | Austria        | 27 - 29 Jun     |
+| ROUND 12 | Great Britain  | 04 - 06 Jul     |
+| ROUND 13 | Belgium        | 25 - 27 Jul     |
+| ROUND 14 | Hungary        | 01 - 03 Aug     |
+| ROUND 15 | Netherlands    | 29 - 31 Aug     |
+| ROUND 16 | Italy          | 05 - 07 Sep     |
+| ROUND 17 | Azerbaijan     | 19 - 21 Sep     |
+| ROUND 18 | Singapore      | 03 - 05 Oct     |
+| ROUND 19 | United States  | 17 - 19 Oct     |
+| ROUND 20 | Mexico         | 24 - 26 Oct     |
+| ROUND 21 | Brazil         | 07 - 09 Nov     |
+| ROUND 22 | Las Vegas      | 20 - 22 Nov     |
+| ROUND 23 | Qatar          | 28 - 30 Nov     |
+| ROUND 24 | Abu Dhabi      | 05 - 07 Dec     |
