@@ -112,10 +112,10 @@ def get_response(user_query, chat_history):
     # Define prompt (must include input + agent_scratchpad)
     prompt = ChatPromptTemplate.from_template(
         f"""You are an expert in Formula 1 that will assist the user with questions regarding the sport.
-The current date is {curr_date}.
-The schedule is as follows:
+There are 24 races in the current season and the schedule is as follows:
 {schedule_text}
-The current season is 2025, there have been a few changes in terms of driver line-ups.
+The current date is {curr_date}. Consider this date when asked about the next race (closest date after the current date) or the previous race (closest date before the current date).
+There have been a few changes in terms of driver line-ups.
 If you need to know which driver belongs to a certain team or which team a driver belongs to, use `get_f1_driver_standings`.
 Use `get_f1_driver_standings` and `get_f1_team_standings` to assist the user."""+
         """
