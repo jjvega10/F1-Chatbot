@@ -156,6 +156,8 @@ if len(pending_f1)==0:
     df.to_parquet('data-cache/f1_2025.pqt')
     del df_og
 else:
+    if not os.path.exists('data-cache/f1_2025.pqt'):
+        df_og = pd.DataFrame(columns=['YEAR', 'RACE'])
     for race in race_cards:
         event_url = base_url+race['href']
         url_name = event_url.split('/')[-1]
@@ -183,12 +185,13 @@ else:
                     print(year, url_name, session_name, e)
     df_og = df_og.set_index(['YEAR', 'RACE'])
     df_extra = pd.concat(dfs).reset_index(drop=True).set_index(['YEAR', 'RACE'])
+    df_extra['SESSION'] = df_extra['SESSION'].map(map_to_df)
     df = pd.concat([df_og[~df_og.index.isin(df_extra.index)], df_extra]).reset_index()
     df['POS.'] = df['POS.'].astype('str')
     df['NO.'] = df['NO.'].astype('int')
     df['LAPS'] = df['LAPS'].astype('float')
     df['PTS.'] = df['PTS.'].astype('float')
-    df['SESSION'] = df['SESSION'].map(map_to_df)
+    df['RACE_NUM'] = df['RACE'].map(dict((v,k) for k,v in enumerate(df['RACE'].unique(), start=1)))
     df.to_parquet('data-cache/f1_2025.pqt')
 
 # Drivers
